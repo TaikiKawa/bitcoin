@@ -1,0 +1,494 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* reset ================================ */
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  font: 100%/1.5 'Avenir Next', 'Hiragino Sans', sans-serif;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #2d3133;
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+input {
+  background-color: transparent;
+  outline-width: 0;
+}
+
+form input[type="submit"] {
+  border: none;
+  cursor: pointer;
+}
+
+/* 共通レイアウト ================================ */
+body {
+  color: #2d3133;
+  background-color: white;
+  margin: 0;
+  min-height: 1vh;
+}
+
+.main {
+  position: absolute;
+  top: 64px;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  background-color: #f5f8fa;
+}
+
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  clear: both;
+}
+
+.container_show {
+  max-width: 850px;
+  margin: 20px auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  clear: both;
+}
+
+.overlay{
+  display: none;
+  width: 100%;
+  height:100%;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background: rgba(0,0,0,0.7);
+}
+
+.overlay p{
+  color: black;
+  float: left;
+}
+
+
+.overlayA{
+  display: none;
+  width: 100%;
+  height:100%;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background: rgba(0,0,0,0.7);
+}
+
+.overlayA p{
+  color: black;
+  float: left;
+}
+
+
+/* ヘッダー ================================ */
+header {
+  height: 64px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  background-color: #E3DF66;
+  opacity: 0.8;
+}
+
+.header-logo {
+  float: left;
+  padding-left: 20px;
+  color: black;
+  font-size: 22px;
+  line-height: 64px;
+}
+/*タイトルロゴ */
+.header-logo a{
+  color: #95989A;
+  font-size: 28px;
+}
+
+.header-menus {
+  float: right;
+  padding-right: 20px;
+}
+
+.header-menus li {
+  float: left;
+  line-height: 64px;
+  font-size: 13px;
+  color: #95989A;
+  padding: 7px;
+}
+
+.header-menus a {
+  float: left;
+  font-size: 13px;
+  color: #95989A;
+}
+
+.header-menus .fa {
+  padding-right: 5px;
+}
+
+/* 登録フォーフに関する記述ーーーーーーーーーーーーー*/
+
+.header-menus input[type="submit"] {
+  padding: 0 20px;
+  float: left;
+  line-height: 64px;
+  color: white;
+  margin: 0;
+  font-size: 13px;
+}
+a.btn_black {
+  color: #95989A;
+  background-color: white;
+  border: none;
+}
+
+a.btn_y {
+  color: #95989A;
+  background-color: #E3DF66;
+  opacity: 0.75;
+  border: none;
+}
+
+a.btn_black:hover{
+    color: white;
+    background-color: #e0a800;
+    border: none;
+}
+
+a.btn_y:hover{
+  color: #95989A;
+  background-color: white;
+  border: none;
+}
+
+.btnbtn{
+  margin: 16px;
+}
+
+/* top ================================ */
+.top-main {
+  padding: 200px 0 100px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  color: white;
+  background-color: #ffe8a1;
+  background-repeat: no-repeat;
+  background-position: center 50%;
+  background-size: cover;
+  background-image: url("/goo.jpg");
+}
+
+
+
+.top-message {
+  position: relative;
+}
+
+.top-main h2 {
+  font-size: 70px;
+  font-weight: 500;
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 20px;
+}
+
+.top-main p {
+  font-size: 24px;
+}
+
+/* about ================================ */
+.about-main {
+  padding: 180px 8% 0;
+  color: #343a40;
+  background-color: #ffe8a1;
+}
+
+.about-main h2 {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.about-main p {
+  font-weight: 200;
+  font-size: 28px;
+}
+
+.about-img {
+  width: 84%;
+}
+
+/* フォーム================================ */
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.form_sub {
+  max-width: 800px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.form-heading {
+  font-weight: 300;
+  margin: 40px 0 10px;
+  font-size: 48px;
+  color: #bcc8d4;
+}
+
+
+.form-body {
+  padding: 30px;
+}
+
+.form-body_sub {
+  padding: 30px;
+}
+
+.form-body p{
+  font-size: 15px;
+}
+
+
+.form-body_sub p{
+  font-size: 20px;
+  float: left;
+}
+
+.form-error {
+  color: #ff4d75;
+}
+
+.form input {
+  width: 100%;
+  border: 1px solid #d8dadf;
+  padding: 10px;
+  color: #57575f;
+  font-size: 16px;
+  letter-spacing: 2px;
+  border-radius: 2px;
+}
+
+
+.form_sub input {
+  width: 100%;
+  border: 1px solid #d8dadf;
+  padding: 10px;
+  color: #57575f;
+  font-size: 16px;
+  letter-spacing: 2px;
+  border-radius: 2px;
+}
+
+
+.form textarea {
+  width: 100%;
+  min-height: 110px;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.form_sub textarea {
+  width: 100%;
+  height: 350px;
+  min-height: 110px;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.form input[type="submit"] {
+  background-color: #E3DF66;
+  color: white;
+  cursor: pointer;
+  font-weight: 300;
+  width: 120px;
+  border-radius: 2px;
+  margin-top: 8px;
+  margin-bottom: 0;
+  float: right;
+}
+
+.form_sub input[type="submit"] {
+  background-color: #E3DF66;
+  color: white;
+  cursor: pointer;
+  font-weight: 300;
+  width: 120px;
+  border-radius: 2px;
+  margin-top: 8px;
+  margin-bottom: 0;
+  float: right;
+}
+
+.form-body:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.form-body_sub:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* フラッシュ ================================ */
+.flash {
+  padding: 10px 0;
+  color: white;
+  background: #E3DF66;
+  text-align: center;
+  position: absolute;
+  top: 64px;
+  z-index: 10;
+  width: 100%;
+  border-radius: 0 0 2px 2px;
+  font-size: 14px;
+}
+
+
+
+.login-modal-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  /* display: none;を追加してください */
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 20%;
+  left: 34%;
+  background-color: #e6ecf0;
+  padding: 20px 0 40px;
+  border-radius: 10px;
+  width: 450px;
+  height: auto;
+  text-align: center;
+}
+
+.fa-times {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: rgba(128, 128, 128, 0.46);
+  cursor: pointer;
+}
+
+#signup-form, #login-form {
+  width: 100%;
+}
+
+#signup-form h2, #login-form h2 {
+  color: #5f5d60;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+#signup-form input, #login-form input {
+  width: 320px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  padding: 12px 12px;
+  border: 1px solid #d0d5d8;
+  border-radius: 5px;
+}
+
+#submit-btn {
+  display: inline-block;
+  padding: 14px 140px;
+  background-color: #5dca88;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.header-right {
+  float: right;
+  background-color: rgba(255,255,255,0.3);
+  transition: all 0.5s;
+}
+
+.header-right:hover {
+  background-color: rgba(255,255,255,0.5);
+}
+
+.header-right .login {
+  line-height: 65px;
+  padding: 0 25px;
+  color: white;
+  cursor: pointer;
+  display: block;
+}
+
+
+
+#login-show p{
+  margin-bottom: 6px;
+  background-color: white;
+  color: #95989A;
+  border-color: #E3DF66;
+}
+
+.btn_k a{
+  margin-bottom: 0px;
+  background-color: white;
+  color: #95989A;
+  border-color: #E3DF66;
+}
+.btn-tw {
+  background-color: #00aced;
+  color: white;
+}
+
+.btn-fb {
+  background-color: #305097;
+  color: white;
+}
+
+.center {
+  text-align: center;
+}
